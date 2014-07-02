@@ -13,6 +13,8 @@ Given changes calculated between two JS objects (using
 ```js
 var x = require('xdiff');
 var Gedi = require('gedi');
+
+// create the new Gedi instance with some initial data
 var model = new Gedi({
   fred: {
     name: 'Fred Smith',
@@ -24,8 +26,11 @@ var model = new Gedi({
     age: 23
   }
 });
+
+// create our patching function
 var patch = require('gedi-patch')(model);
 
+// use xdiff to generate a set of changes and patch each change
 x.diff(model.get(), {
   fred: {
     name: 'Fred Smith',
@@ -38,7 +43,8 @@ x.diff(model.get(), {
   }
 }).forEach(patch);
 
-console.log(model.get());
+console.log(model.get('[/ted/name]'));
+// --> Edward Longsocks
 
 ```
 
