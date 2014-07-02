@@ -8,7 +8,7 @@ var gpath = require('gedi-paths');
 
   ## Example Usage
 
-  To be completed.
+  <<< examples/update.js
 
 **/
 module.exports = function(model, basePath) {
