@@ -1,6 +1,6 @@
 {
   "name": "gedi-patch",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Given an xdiff change, update a gedi model",
   "main": "index.js",
   "scripts": {
