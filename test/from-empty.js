@@ -17,6 +17,6 @@ test('can create a patch function using the data', function(t) {
 
 test('can apply required patches for a single key change', function(t) {
   t.plan(1);
-  x.diff({}, { name: 'Fred' }).forEach(patch);
+  x.diff(data.get(), { name: 'Fred' }).forEach(patch);
   t.equal(data.get('[/name]'), 'Fred');
 });
