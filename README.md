@@ -6,7 +6,7 @@ Given changes calculated between two JS objects (using
 
 [![NPM](https://nodei.co/npm/gedi-patch.png)](https://nodei.co/npm/gedi-patch/)
 
-
+[![unstable](https://img.shields.io/badge/stability-unstable-yellowgreen.svg)](https://github.com/dominictarr/stability#unstable) [![Build Status](https://img.shields.io/travis/DamonOehlman/gedi-patch.svg?branch=master)](https://travis-ci.org/DamonOehlman/gedi-patch) 
 
 ## Example Usage
 
