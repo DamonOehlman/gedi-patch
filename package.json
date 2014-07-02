@@ -1,0 +1,29 @@
+{
+  "name": "gedi-patch",
+  "version": "0.0.0",
+  "description": "Given an xdiff change, update a gedi model",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/gedi-patch.git"
+  },
+  "keywords": [
+    "model",
+    "sync",
+    "remoteupdate"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/gedi-patch/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/gedi-patch",
+  "devDependencies": {
+    "gedi": "^1.2.3",
+    "tape": "^2.13.3",
+    "xdiff": "^0.2.11"
+  }
+}
