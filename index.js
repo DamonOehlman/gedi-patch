@@ -27,6 +27,7 @@ module.exports = function(model, basePath) {
 
     // create the keypath
     keyPath = gpath.create(diff[1].map(remapRoot));
+    // console.log('>> ' + diff[0] + ': ' + keyPath);
 
     switch (diff[0]) {
       case 'set': {
