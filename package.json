@@ -27,5 +27,8 @@
     "gedi": "^1.2.3",
     "tape": "^2.13.3",
     "xdiff": "^0.2.11"
+  },
+  "dependencies": {
+    "gedi-paths": "^1.0.0"
   }
 }
