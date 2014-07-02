@@ -34,6 +34,15 @@ module.exports = function(model, basePath) {
 
         return;
       }
+
+      case 'del': {
+        model.remove(keyPath);
+        break;
+      }
+
+      default: {
+        console.log('!! unhandled action: ' + diff[0]);
+      }
     }
 
     return diff;
