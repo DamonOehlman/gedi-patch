@@ -1,3 +1,5 @@
+var gpath = require('gedi-paths');
+
 /**
   # gedi-patch
 
@@ -9,7 +11,31 @@
   To be completed.
 
 **/
-module.exports = function(model) {
+module.exports = function(model, basePath) {
+
+  function remapRoot(part) {
+    return part === 'root' ? '' : part;
+  }
+
   return function(diff) {
+    var keyPath;
+
+    // if we haven't been passed an array as diff, then passthrough
+    if (! Array.isArray(diff)) {
+      return diff;
+    }
+
+    // create the keypath
+    keyPath = gpath.create(diff[1].map(remapRoot));
+
+    switch (diff[0]) {
+      case 'set': {
+        model.set(keyPath, diff[2]);
+
+        return;
+      }
+    }
+
+    return diff;
   };
 };
