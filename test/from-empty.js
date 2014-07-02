@@ -20,3 +20,9 @@ test('can apply required patches for a single key change', function(t) {
   x.diff(data.get(), { name: 'Fred' }).forEach(patch);
   t.equal(data.get('[/name]'), 'Fred');
 });
+
+test('apply a delete, and reset the object', function(t) {
+  t.plan(1);
+  x.diff(data.get(), {}).forEach(patch);
+  t.deepEqual(data.get(), {}, 'reset data');
+});
